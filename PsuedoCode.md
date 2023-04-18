@@ -22,3 +22,31 @@ WHEN I click the save button for that timeblock
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
+
+# What do I need?
+Display Current Day at TOP of calendar
+Time blocks for standard business hours
+Color coded timeblocks, depicting the past, present and future 
+Ability to type in timeblock and save event in local storage
+Ability to refresh page with saved events still available
+
+# First?
+Add current day at top of calendar:
+
+
+# Second?
+Create ability to save events in timeblocks 
+1. Add event listener to javascript:
+    -listen for click on save
+        -saves to local storage
+        -and remains on webpage after refresh
+
+
+# Third?
+Color code timeblocks based on past/present/future
+
+
+
+
+# Fourth?
+Add timeblocks for standard business hours

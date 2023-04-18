@@ -1,11 +1,29 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-var save = $("#hour-9, #hour-10, #hour-11" );
+
 $(document).ready(function () {
-  save.on('click', function () {
-    console.log('Hello World');
+var save = $("button");
+// console.log("THIS IS SAVE = ",save)
+  //getting localstorage
+  var itemKey = localStorage.getItem("hour-9");
+  console.log(itemKey)
+
+
+
+  save.on('click', function (event) {
+    var userInput = ($(this).siblings("textarea").val());
+    console.log($(this).parent().attr("id"))
+    var timeBlockId = $(this).parent().attr("id");
+    console.log(userInput)
+   
+    // timeBlock.push(userInput)
+    localStorage.setItem(timeBlockId, userInput);
+    // console.log(userInput)
+   
   });
+
+
   
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
