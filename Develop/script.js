@@ -3,29 +3,32 @@
 // in the html.
 
 $(document).ready(function () {
-var save = $("button");
-// console.log("THIS IS SAVE = ",save)
+var save = $("button"); //created variable to apply to all button elements in HTML
+var today = dayjs(); // this is defining the variable today as the function linked in the html document
+
+$('#currentDay').text(today.format('MMM D, YYYY')); // posts current date using the function defined in the today variable
   //getting localstorage
-  var itemKey = localStorage.getItem("hour-9");
-  console.log(itemKey)
+//var itemKey = localStorage.getItem("hour-9");
+  //console.log(itemKey)
 
 
 
   save.on('click', function (event) {
-    var userInput = ($(this).siblings("textarea").val());
-    console.log($(this).parent().attr("id"))
-    var timeBlockId = $(this).parent().attr("id");
-    console.log(userInput)
+  var userInput = $(this).siblings("textarea").val();
+  //this is setting the variable for the text users type in. The variable's name is userInput. It is everything that belongs to the save variable. In this case that is the button element and its child element i. siblings grabs associated child of the parent div. the sibling named is the textarea element. 
+  var timeBlockId = $(this).parent().attr("id");
+  // sets timeBlockId to save's parent, focusing on the id attribute only
    
-    // timeBlock.push(userInput)
-    localStorage.setItem(timeBlockId, userInput);
-    // console.log(userInput)
+  //   // timeBlock.push(userInput)
+  localStorage.setItem(timeBlockId, userInput); //setItem adds the timeBlockID and userInput to local storage
+  //   // console.log(userInput)
+
+  localStorage.getItem(timeBlockId, userInput);
    
   });
 
 
-  
-  // TODO: Add a listener for click events on the save button. This code should
+
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
   // function? How can DOM traversal be used to get the "hour-x" id of the
