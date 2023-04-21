@@ -1,18 +1,8 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
 $(document).ready(function () {
 var save = $("button"); 
-var today = dayjs(); 
-
-
+var today = dayjs();
 
 $('#currentDay').text(today.format('MMM D, YYYY')); 
-  //getting localstorage
-//var itemKey = localStorage.getItem("hour-9");
-  //console.log(itemKey)
-
 
   save.on('click', function testing (event) {
   var userInput = $(this).siblings("textarea").val();
@@ -34,14 +24,18 @@ colorCoding (textarea, savedInput);
 
 function colorCoding (textarea, savedInput) {
   var hourValue = parseInt(savedInput.split("-")[1]);
-  var hourDayJS = dayjs().hour(hourValue)
-  console.log(hourDayJS)//working here
+  //console.log(hourValue);
+  var currentTime = new Date()
+  var now = currentTime.getHours();
+  console.log(now);
+  var blockColor = document.querySelectorAll("textarea");
+    if (now == hourValue) {console.log("now")}
+    else {console.log("not now");}
+
+  };
   
-}
 
-  });
-
-  //});
+});
   
   //
   // TODO: Add code to apply the past, present, or future class to each time
@@ -53,5 +47,3 @@ function colorCoding (textarea, savedInput) {
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
