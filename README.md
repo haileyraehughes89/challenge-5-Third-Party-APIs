@@ -31,3 +31,7 @@ THEN the saved events persist
 ### Current Day:
 jquery syntax was used to call the paragraph element with the id currentDay. the current date was assigned to this variable and formatted into a string to show only the month, day and year.
 
+### Timeblocks:
+Business hours were hard coded into the HTML. However, each div element that was in the row time-block class was assigned an id which was the 24 hour conversion of the standard business hour.
+
+
