@@ -39,3 +39,7 @@ Color coding classes were set up in CSS, and then applied dynamically in javascr
 
 ### Save and Local Storage:
 A click event was used to save user input into local storage. The time block ids were used as the key name, and the corresponding input was the value of the key. A for loop was created in order for the user input to persist after a refresh. Userinput persisted, post refresh, by displaying the content saved in local storage.
+
+
+https://user-images.githubusercontent.com/127250721/236540918-3dc69532-a401-4b22-8845-f805fdbff602.mp4
+
