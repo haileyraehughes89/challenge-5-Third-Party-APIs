@@ -34,4 +34,5 @@ jquery syntax was used to call the paragraph element with the id currentDay. the
 ### Timeblocks:
 Business hours were hard coded into the HTML. However, each div element that was in the row time-block class was assigned an id which was the 24 hour conversion of the standard business hour.
 
-
+### Color Coding:
+Color coding classes were set up in CSS, and then applied dynamically in javascript. The current hours were pulled out from the new Date() constructor. These hours were returned as a string and were able to be compared to the timeblock ids. If the current time was greater than the id, it was assigned to the past class. If the current hour was equal to the id, it was assigned to the present class. And if it was smaller, it was assigned to the future class. The CSS styling was applied according to the class assigned. 
