@@ -43,3 +43,5 @@ A click event was used to save user input into local storage. The time block ids
 
 https://user-images.githubusercontent.com/127250721/236540918-3dc69532-a401-4b22-8845-f805fdbff602.mp4
 
+Deploy Link: https://haileyraehughes89.github.io/challenge-5-Third-Party-APIs/
+
